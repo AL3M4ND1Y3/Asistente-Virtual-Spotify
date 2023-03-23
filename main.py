@@ -136,12 +136,10 @@ def centro_comandos():
             pywhatkit.search(pedido)
             hablar("esto es lo que encontre")
             continue    
-        elif "reproducir" in pedido:
-                pedido = pedido.replace("reproducir","")
+        elif "canción" in pedido:
+                pedido.lower()
                 print(pedido)
-                pedido.upper()
-                spotify.play_song(pedido)
-                continue
+                spotify.spotify(pedido)
         elif "ya no quiero nada" in pedido :
             hablar("Apagandome...")
             recibido = False
